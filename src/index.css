@@ -36,7 +36,7 @@ input{
 .container{
   columns: 4;
   gap: 1rem;
-  width: 1200px;
+  width: 70vw;
 }
 
 .container-title{
@@ -66,3 +66,26 @@ input{
 .loader{
   text-align: center;
 }
+
+@media ( max-width: 1200px){
+  .container{
+    columns: 3;
+    width: calc( 90vw - 50px);
+    box-sizing: border-box;
+  }
+}
+
+@media ( max-width: 768px){
+  .container{
+    columns: 2;
+    width: calc( 100vw - 20px);
+  }
+}
+
+@media ( max-width: 480px){
+  .container{
+    columns: 1;
+    width: calc( 100vw - 10px);
+  }
+}
+
