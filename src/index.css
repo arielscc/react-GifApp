@@ -78,14 +78,14 @@ input{
 @media ( max-width: 768px){
   .container{
     columns: 2;
-    width: calc( 100vw - 20px);
+    width: calc( 100vw - 30px);
   }
 }
 
 @media ( max-width: 480px){
   .container{
     columns: 1;
-    width: calc( 100vw - 10px);
+    width: calc( 100vw - 30px);
   }
 }
 
