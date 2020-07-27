@@ -1,13 +1,68 @@
-body {
+body{
+  font-family: Helvetica, sans-serif, Arial;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h2{
+  padding: 1rem;
+}
+hr{
+  color: gray;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input{
+  width: 100%;
+  height: 2rem;
+  border-radius: .5rem;
+  border: gray solid 1px;
+  padding: 0 .5rem;
+  box-sizing: border-box;
+  color: #2D3748;
+}
+
+.form{
+  display: flex;
+}
+.form button{
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-left: 1rem;
+  cursor: pointer;
+  color: #2D3748;
+}
+.container{
+  columns: 4;
+  gap: 1rem;
+  width: 1200px;
+}
+
+.container-title{
+  color: #4A5568;
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+.card{
+  border-radius: .6rem;
+  display: flex;
+  margin: 0 0 1rem;
+  flex-direction: column;
+  overflow: hidden;
+  break-inside: avoid;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.card img {
+  max-width: 100%;
+}
+.card h3 {
+  text-align: center;
+  color: #4A5568;
+}
+.loader{
+  text-align: center;
 }
