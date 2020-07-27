@@ -1,3 +1,8 @@
+# React Gif App
+
+Project for search gifs, using React basic concepts
+[live project](https://arielscc.github.io/react-GifApp/.)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
