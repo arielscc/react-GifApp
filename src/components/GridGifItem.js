@@ -12,6 +12,7 @@ function GridGifItem( {title, url} ) {
 
 GridGifItem.propTypes = {
   title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 }
 
 export default GridGifItem

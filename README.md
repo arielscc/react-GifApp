@@ -71,3 +71,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+
+#### toHaveBeenCalled
+
+Esta funcion se ejecuta para evaluar si una funcion ha sido llamada almenoz una vez
