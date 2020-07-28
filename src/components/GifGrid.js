@@ -2,7 +2,8 @@ import React from 'react'
 import GridGifItem from './GridGifItem';
 import { useFetchGifs } from '../hooks/useFetchGifs';
 import { BallTriangle } from 'svg-loaders-react'
-// import getGifs from '../helpers/getGifs';
+import PropTypes from 'prop-types'
+
 
 function GifGrid( { category } ) {
 
@@ -34,6 +35,10 @@ function GifGrid( { category } ) {
 
     </div>
   )
+}
+
+GifGrid.propTypes = {
+  category: PropTypes.string.isRequired
 }
 
 export default GifGrid;
