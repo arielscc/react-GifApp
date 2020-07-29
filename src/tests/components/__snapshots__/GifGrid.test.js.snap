@@ -43,6 +43,12 @@ exports[`Pruebas del componente <GifGrid/> Debe de mostrar items cuando se carga
       title="cualquier cosa"
       url="http://alguna-imagen.net/imagen.gif"
     />
+    <GridGifItem
+      id="a12312"
+      key="a12312"
+      title="cualquier cosa"
+      url="http://alguna-imagen.net/imagen.gif"
+    />
   </div>
 </div>
 `;

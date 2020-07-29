@@ -28,8 +28,14 @@ describe('Pruebas del componente <GifGrid/>', () => {
   });
   
   test('Debe de mostrar items cuando se cargan imagenes de useFetchGrid', () => {
-    const gifs = [{
+    const gifs = [
+    {
       id: 'abc',
+      url: 'http://alguna-imagen.net/imagen.gif',
+      title: 'cualquier cosa'
+    },
+    {
+      id: 'a12312',
       url: 'http://alguna-imagen.net/imagen.gif',
       title: 'cualquier cosa'
     }]
@@ -38,8 +44,10 @@ describe('Pruebas del componente <GifGrid/>', () => {
       loading: false
     })
 
-    const wrapper = shallow( <GifGrid  category = { category }/>);
-    expect( wrapper ).toMatchSnapshot()
-    
+    const wrapper = shallow( <GifGrid  category = { category }/> );
+
+    expect( wrapper ).toMatchSnapshot();
+    expect( wrapper.find('BallTriangle').exists() ).toBe( false );
+    expect( wrapper.find('GridGifItem').length ).toBe( gifs.length );
   });
 });
