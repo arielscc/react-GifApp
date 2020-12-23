@@ -1,4 +1,4 @@
-body{
+body {
   font-family: Helvetica, sans-serif, Arial;
   padding: 0;
   margin: 0;
@@ -6,54 +6,66 @@ body{
   flex-direction: column;
   align-items: center;
 }
-h2{
+h2 {
   padding: 1rem;
+  text-align: center;
 }
-hr{
+hr {
   color: gray;
+  width: 70vw;
 }
 
-input{
-  width: 100%;
-  height: 2rem;
-  border-radius: .5rem;
-  border: gray solid 1px;
-  padding: 0 .5rem;
-  box-sizing: border-box;
-  color: #2D3748;
-}
-
-.form{
+.form {
   display: flex;
+  width: 70vw;
+  margin: auto;
 }
-.form button{
+
+.form input {
+  height: 2rem;
+  border-radius: 0.5rem;
+  border: gray solid 1px;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+  color: #2d3748;
+  width: 100%;
+}
+
+.form button {
   border: 1px solid gray;
   border-radius: 5px;
   margin-left: 1rem;
   cursor: pointer;
-  color: #2D3748;
-}
-.container{
-  columns: 4;
-  gap: 1rem;
-  width: 70vw;
+  color: #2d3748;
 }
 
-.container-title{
-  color: #4A5568;
+.container__grid-gif {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  columns: 4;
+  gap: 1rem;
+  width: 60%;
+  align-self: center;
+}
+
+.container-title {
+  color: #4a5568;
   font-size: 2rem;
   text-align: center;
 }
 
-
-.card{
-  border-radius: .6rem;
+.card {
+  border-radius: 0.6rem;
   display: flex;
   margin: 0 0 1rem;
   flex-direction: column;
   overflow: hidden;
   break-inside: avoid;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .card img {
@@ -61,31 +73,30 @@ input{
 }
 .card h3 {
   text-align: center;
-  color: #4A5568;
+  color: #4a5568;
 }
-.loader{
+.loader {
   text-align: center;
 }
 
-@media ( max-width: 1200px){
-  .container{
+@media (max-width: 1200px) {
+  .container {
     columns: 3;
-    width: calc( 90vw - 50px);
+    width: calc(90vw - 50px);
     box-sizing: border-box;
   }
 }
 
-@media ( max-width: 768px){
-  .container{
+@media (max-width: 768px) {
+  .container {
     columns: 2;
-    width: calc( 100vw - 30px);
+    width: calc(100vw - 30px);
   }
 }
 
-@media ( max-width: 480px){
-  .container{
+@media (max-width: 480px) {
+  .container {
     columns: 1;
-    width: calc( 100vw - 30px);
+    width: calc(100vw - 30px);
   }
 }
-
