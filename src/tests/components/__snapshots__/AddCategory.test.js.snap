@@ -5,10 +5,6 @@ exports[`Testing component <AddCategory/> AddCategory snapshot test 1`] = `
   className="form"
   onSubmit={[Function]}
 >
-  <p>
-     
-     
-  </p>
   <input
     onChange={[Function]}
     type="text"

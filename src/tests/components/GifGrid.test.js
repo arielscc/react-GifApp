@@ -1,53 +1,51 @@
-import GifGrid  from "../../components/GifGrid";
-import React from 'react'
+import GifGrid from '../../components/GifGrid';
+import React from 'react';
 
-import { shallow } from "enzyme";
-import '@testing-library/jest-dom'
-import { useFetchGifs } from "../../hooks/useFetchGifs";
+import { shallow } from 'enzyme';
+import '@testing-library/jest-dom';
+import { useFetchGifs } from '../../hooks/useFetchGifs';
 
 jest.mock('../../hooks/useFetchGifs');
 
-
-
-
 describe('Pruebas del componente <GifGrid/>', () => {
   const category = 'Dragon Ball';
+
   // let wrapper = shallow( <GifGrid  category = { category }/>);
   // beforeEach( () => {
   //   wrapper = shallow( <GifGrid  category = { category }/>);
   // })
-  
+
   test('Comparando con el snapshot', () => {
-    
     useFetchGifs.mockReturnValue({
       data: [],
-      loading: true
-    })
-    const wrapper = shallow( <GifGrid  category = { category }/>);
-    expect( wrapper ).toMatchSnapshot()
+      loading: true,
+    });
+    const wrapper = shallow(<GifGrid category={category} />);
+    expect(wrapper).toMatchSnapshot();
   });
-  
+
   test('Debe de mostrar items cuando se cargan imagenes de useFetchGrid', () => {
     const gifs = [
-    {
-      id: 'abc',
-      url: 'http://alguna-imagen.net/imagen.gif',
-      title: 'cualquier cosa'
-    },
-    {
-      id: 'a12312',
-      url: 'http://alguna-imagen.net/imagen.gif',
-      title: 'cualquier cosa'
-    }]
+      {
+        id: 'abc',
+        url: 'http://alguna-imagen.net/imagen.gif',
+        title: 'cualquier cosa',
+      },
+      {
+        id: 'a12312',
+        url: 'http://alguna-imagen.net/imagen.gif',
+        title: 'cualquier cosa',
+      },
+    ];
     useFetchGifs.mockReturnValue({
       data: gifs,
-      loading: false
-    })
+      loading: false,
+    });
 
-    const wrapper = shallow( <GifGrid  category = { category }/> );
+    const wrapper = shallow(<GifGrid category={category} />);
 
-    expect( wrapper ).toMatchSnapshot();
-    expect( wrapper.find('BallTriangle').exists() ).toBe( false );
-    expect( wrapper.find('GridGifItem').length ).toBe( gifs.length );
+    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find('BallTriangle').exists()).toBe(false);
+    expect(wrapper.find('GridGifItem').length).toBe(gifs.length);
   });
 });

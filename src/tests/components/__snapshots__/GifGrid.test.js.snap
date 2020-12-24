@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pruebas del componente <GifGrid/> Comparando con el snapshot 1`] = `
-<div>
+<div
+  className="container__grid-gif"
+>
   <h3
     className="container-title animate__animated animate__flipInX"
   >
@@ -23,7 +25,9 @@ exports[`Pruebas del componente <GifGrid/> Comparando con el snapshot 1`] = `
 `;
 
 exports[`Pruebas del componente <GifGrid/> Debe de mostrar items cuando se cargan imagenes de useFetchGrid 1`] = `
-<div>
+<div
+  className="container__grid-gif"
+>
   <h3
     className="container-title animate__animated animate__flipInX"
   >
