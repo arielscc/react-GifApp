@@ -1,27 +1,35 @@
-# React Gif App
+# Gif App
 
-Project for search gifs, using React basic concepts
+Este proyecto tiene consta de fundamentos de ReactJs y TailwindCss en su versión 16, Trata de un buscador de imágenes gifs, este devuelve 10 imágenes relacionadas a la búsqueda.
+
+Las imágenes gifs son obtenidas mediante la API [GIPHY Developers](https://developers.giphy.com/)
+
+### Proyecto
+
 [live project](https://arielscc.github.io/react-GifApp/.)
 
-#### toHaveBeenCalled
+### Instalación
 
-Esta funcion se ejecuta para evaluar si una funcion ha sido llamada almenoz una vez
-
-#### renderHook
-
-Esta funcion es usada para hacer pruebas de hooks, basada en una libreria llamada [react-hooks-testing-library](https://react-hooks-testing-library.com/)
-
-```bash
-npm install --save-dev @testing-library/react-hooks
+```
+  npm install
 ```
 
-ejemplo:
-```js
-test('debe de retornar el estado inicial del hook', () => {
-  const { result } = renderHook( () => useFetchGifs( 'One punch' ) )
-  const { data, loading } = result.current
+### Scripts NPM
 
-  expect( data ).toEqual([])
-  expect( loading ).toBeTruthy()
-});
+#Para ejecutar el proyecto en un entorno local
+
+```js
+  npm run start
+```
+
+#Para generar el build de producción
+
+```js
+  npm run build
+```
+
+#Para ejecutar los tests
+
+```js
+  npm run test
 ```

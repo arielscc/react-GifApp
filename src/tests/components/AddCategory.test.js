@@ -5,6 +5,7 @@ import '@testing-library/jest-dom';
 
 describe('Testing component <AddCategory/>', () => {
   const setCategories = jest.fn();
+
   let wrapper = shallow(<AddCategory setCategories={setCategories} />);
 
   beforeEach(() => {
